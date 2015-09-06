@@ -1,0 +1,37 @@
+{
+  "name": "AssemanyCordovaStarter",
+  "version": "1.0.0",
+  "authors": [
+    "Guilherme Assemany <guilhermeassemany@hotmail.com>"
+  ],
+  "description": "Starter para phonegap/cordova",
+  "main": "js/app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "eGrafite"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.assemany.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "www/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4.5",
+    "angular-material": "~0.10.1",
+    "angular-material-icons": "~0.5.0",
+    "angular-resource": "~1.4.5",
+    "angular-route": "~1.4.5",
+    "angular-sanitize": "~1.4.5",
+    "angular-touch": "~1.4.5",
+    "angular-translate": "~2.7.2",
+    "angular-translate-loader-static-files": "~2.7.2",
+    "fastclick": "~1.0.6"
+  }
+}

@@ -1,0 +1,44 @@
+.itens-menu .md-button {
+  color: inherit;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding:  5px 0 5px 0;
+}
+.itens-menu .selected {
+  color: #03a9f4;
+}
+.face {
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  margin: 4px 16px;
+  vertical-align: middle;
+  width: 48px;
+}
+.content-wrapper {
+  position: relative;
+}
+#primary-col {
+  overflow: hidden;
+}
+#primary-col .md-button {
+  margin: 8px auto 16px 0;
+}
+#primary-col .cell {
+  flex: 1 1 auto;
+}
+#primary-col img {
+  display: block;
+  max-width: 100%;
+}
+
+.md-sidenav-backdrop {
+    opacity: 0 !important;
+}
+
+md-sidenav.md-closed-add,
+md-sidenav.md-closed-remove {
+    -webkit-transition: all .4s cubic-bezier(0.25, .8, .25, 1) !important;
+    transition: all .4s cubic-bezier(0.25, .8, .25, 1) !important;
+}
