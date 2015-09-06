@@ -23,6 +23,5 @@
   },
   "_source": "git://github.com/PascalPrecht/bower-angular-translate.git",
   "_target": "~2.7.2",
-  "_originalSource": "angular-translate",
-  "_direct": true
+  "_originalSource": "angular-translate"
 }

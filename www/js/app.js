@@ -21,6 +21,11 @@
             templateUrl: 'views/paginaB.html',
             controller: 'PaginaBCtrl',
             controllerAs: 'paginab'
+          })
+          .when('/dialogs', {
+            templateUrl: 'views/dialogs.html',
+            controller: 'dialogsCtrl',
+            controllerAs: 'dialogs'
           });
 
 

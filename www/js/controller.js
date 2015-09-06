@@ -17,6 +17,12 @@
                   //iconeCor: 'pink',
                   view: 'viewB'
               },
+              {
+                  nome: 'Dialogs',
+                  icone: 'chat',
+                  //iconeCor: 'pink',
+                  view: 'dialogs'
+              },
             ];
 
             $scope.selected = null;
@@ -40,26 +46,57 @@
             };
 
         }])
-        .controller('TesteCtrl', ['$scope', '$rootScope', '$window', '$location', function ($scope, $rootScope, $window, $location) {
+        .controller('TesteCtrl', ['$scope', '$rootScope', '$window', '$location', '$filter', function ($scope, $rootScope, $window, $location, $filter) {
 
         }])
         .controller('PaginaACtrl', function ($scope,$mdSidenav,$mdUtil) {
 
         })
-        .controller('PaginaBCtrl', function  (Post) {
+        .controller('PaginaBCtrl', function(Post) {
 
           var vm = this;
 
           //$scope.posts = [];
 
           vm.posts = [];
-
           Post.query(function(data) {
             vm.posts = data;
           });
-
           //console.log($scope.posts);
 
-        });
+        })
+        .controller('dialogsCtrl', ['$scope', '$mdDialog', '$filter', function($scope, $mdDialog, $filter) {
+          $scope.status = '  ';
+          $scope.showAlert = function(ev) {
+            // Appending dialog to document.body to cover sidenav in docs app
+            // Modal dialogs should fully cover application
+            // to prevent interaction outside of dialog
+            $mdDialog.show(
+              $mdDialog.alert()
+                .parent(angular.element(document.querySelector('#popupContainer')))
+                .clickOutsideToClose(true)
+                .title($filter('translate')('MESSAGE'))
+                .content('Texto do alerta aqui.')
+                .ariaLabel('Demonstração de alerta')
+                .ok('Entendi!')
+                .targetEvent(ev)
+            );
+          };
+          $scope.showConfirm = function(ev) {
+            // Appending dialog to document.body to cover sidenav in docs app
+            var confirm = $mdDialog.confirm()
+                  .title($filter('translate')('MESSAGE'))
+                  .content('Escolha uma das opções.')
+                  .ariaLabel('Lucky day')
+                  .ok('Sim!')
+                  .cancel('Não')
+                  .targetEvent(ev);
+            $mdDialog.show(confirm).then(function() {
+              $scope.status = 'Você clicou em sim.';
+            }, function() {
+              $scope.status = 'Você clicou em não.';
+            });
+          };
+        }]);
 
 }(angular));

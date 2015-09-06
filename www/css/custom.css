@@ -2,7 +2,7 @@
   color: inherit;
   text-align: left;
   width: 100%;
-  margin: 0;
+  margin: 0 0 0 10px;
   padding:  5px 0 5px 0;
 }
 .itens-menu .selected {
@@ -41,4 +41,9 @@ md-sidenav.md-closed-add,
 md-sidenav.md-closed-remove {
     -webkit-transition: all .4s cubic-bezier(0.25, .8, .25, 1) !important;
     transition: all .4s cubic-bezier(0.25, .8, .25, 1) !important;
+}
+
+.sidenav-image {
+  width: 100%;
+  max-height: 200px;
 }

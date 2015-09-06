@@ -20,7 +20,7 @@
     <body layout="column" ng-controller="AppCtrl">
 
         <md-toolbar layout="row">
-          <md-button ng-click="habilitaMenu('left')" hide-gt-sm class="md-icon-button menuBtn" max-ripple="1">
+          <md-button ng-click="habilitaMenu('left')" class="md-icon-button menuBtn" max-ripple="1">
             <ng-md-icon aria-label="Menu" icon="menu" ></ng-md-icon>
           </md-button>
           <h1 layout-align-gt-sm="center" class="md-toolbar-tools">Assemany Cordova Starter</h1>
@@ -44,7 +44,8 @@
 
         <div layout="row" flex class="content-wrapper">
 
-            <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+            <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2 md-closed" md-component-id="left" >
+              <img ng-src="img/sidenav.png" class="md-card-image sidenav-image" alt="Sidenav Image" >
               <md-list class="itens-menu">
                 <md-item ng-repeat="item in itensMenu" max-ripple="1" >
                   <md-item-content>
@@ -54,7 +55,9 @@
                       {{item.nome}}
                     </md-button>
                   </md-item-content>
+                  <md-divider ></md-divider>
                 </md-item>
+
               </md-list>
             </md-sidenav>
 

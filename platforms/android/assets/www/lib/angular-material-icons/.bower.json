@@ -39,6 +39,5 @@
   },
   "_source": "git://github.com/klarsys/angular-material-icons.git",
   "_target": "~0.5.0",
-  "_originalSource": "angular-material-icons",
-  "_direct": true
+  "_originalSource": "angular-material-icons"
 }
