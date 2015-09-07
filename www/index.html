@@ -25,18 +25,18 @@
           </md-button>
           <h1 layout-align-gt-sm="center" class="md-toolbar-tools">Assemany Cordova Starter</h1>
           <md-menu >
-          <md-button aria-label="Select Language" class="md-icon-button" ng-click="$mdOpenMenu($event)" max-ripple="1">
-            <ng-md-icon aria-label="Select Language" icon="language" ></ng-md-icon>
+          <md-button aria-label="{{'SELECT_LANGUAGE' | translate}}" class="md-icon-button" ng-click="$mdOpenMenu($event)" max-ripple="1">
+            <ng-md-icon aria-label="{{'SELECT_LANGUAGE' | translate}}" icon="language" ></ng-md-icon>
           </md-button>
           <md-menu-content width="2">
             <md-menu-item >
-              <md-button ng-click="changeLanguage('pt-br')"> <span md-menu-align-target>Português do Brasil</span></md-button>
+              <md-button ng-click="changeLanguage('pt-br')"> <span md-menu-align-target>{{'PT_BR' | translate}}</span></md-button>
             </md-menu-item>
             <md-menu-item >
-              <md-button ng-click="changeLanguage('en')"> <span md-menu-align-target>Inglês</span></md-button>
+              <md-button ng-click="changeLanguage('en')"> <span md-menu-align-target>{{'EN' | translate}}</span></md-button>
             </md-menu-item>
             <md-menu-item >
-              <md-button ng-click="changeLanguage('es')"> <span md-menu-align-target>Espanhol</span></md-button>
+              <md-button ng-click="changeLanguage('es')"> <span md-menu-align-target>{{'ES' | translate}}</span></md-button>
             </md-menu-item>
           </md-menu-content>
         </md-menu>
@@ -50,7 +50,6 @@
                 <md-item ng-repeat="item in itensMenu" max-ripple="1" >
                   <md-item-content>
                     <md-button ng-click="selecionaItem(item.view)" ng-class="{'selected' : item.view === selected }" max-ripple="1">
-                      <!--<md-icon aria-label="{{item.nome}}" md-svg-icon="img/svg/{{item.icone}}.svg"></md-icon>-->
                       <ng-md-icon icon="{{item.icone}}" style="fill: {{item.iconeCor}}" ></ng-md-icon>
                       {{item.nome}}
                     </md-button>
@@ -63,34 +62,21 @@
 
             <div layout="column" flex class="content-wrapper" id="primary-col">
                 <md-content layout="column" flex class="md-padding" ng-view>
-                  <!-- Conteudo das views -->
+                  <!-- Views Content -->
                 </md-content>
             </div>
         </div>
 
-        <!-- Dependências do Projeto -->
+        <!-- Cordova/Phonegap Files -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="lib/angular/angular.min.js"></script>
-        <script type="text/javascript" src="lib/angular-aria/angular-aria.min.js"></script>
-        <script type="text/javascript" src="lib/angular-resource/angular-resource.min.js"></script>
-        <script type="text/javascript" src="lib/angular-sanitize/angular-sanitize.min.js"></script>
-        <script type="text/javascript" src="lib/angular-animate/angular-animate.min.js"></script>
-        <script type="text/javascript" src="lib/angular-material/angular-material.min.js"></script>
-        <script type="text/javascript" src="lib/angular-material-icons/angular-material-icons.min.js"></script>
-        <script type="text/javascript" src="lib/angular-route/angular-route.min.js"></script>
-        <script type="text/javascript" src="lib/angular-translate/angular-translate.min.js"></script>
-        <script type="text/javascript" src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
-        <script type="text/javascript" src="lib/angular-touch/angular-touch.min.js"></script>
-        <script type="text/javascript" src="lib/fastclick/lib/fastclick.js"></script>
 
+        <!-- AngularJS Files -->
+        <script type="text/javascript" src="js/vendor.min.js"></script>
+        <script type="text/javascript" src="js/app.min.js"></script>
+        <script type="text/javascript" src="js/acs.tpls.min.js"></script>
 
-        <!-- Arquivos da aplicação do Angular -->
-        <script type="text/javascript" src="js/service.js"></script>
-        <script type="text/javascript" src="js/controller.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-
-        <!-- Inicializador do Phonegap -->
+        <!-- Cordova/Phonegap initialize -->
         <script type="text/javascript">
             app.initialize();
         </script>

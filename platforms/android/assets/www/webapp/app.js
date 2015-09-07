@@ -1,29 +1,31 @@
-(function (angular) {
-    'use strict';
-    angular.module('AssemanyCordovaStarter', [
-        'ngTouch',
-        'ngRoute',
-        'ngAnimate',
-        'AssemanyCordovaStarter.controllers',
-        'ngMaterial',
-        'ngMdIcons',
-        'pascalprecht.translate'
-    ])
+'use strict';
+
+var acs = angular.module('AssemanyCordovaStarter', [
+      'ngTouch',
+      'ngRoute',
+      'ngAnimate',
+      'ngResource',
+      'ngMaterial',
+      'ngMdIcons',
+      'pascalprecht.translate'
+]);
+
+    angular.module('AssemanyCordovaStarter')
     .config(['$routeProvider', '$locationProvider',
       function($routeProvider, $locationProvider) {
         $routeProvider
           .when('/viewA', {
-            templateUrl: 'views/paginaA.html',
+            templateUrl: 'webapp/views/paginaA.html',
             controller: 'PaginaACtrl',
             controllerAs: 'pagina'
           })
           .when('/viewB', {
-            templateUrl: 'views/paginaB.html',
+            templateUrl: 'webapp/views/paginaB.html',
             controller: 'PaginaBCtrl',
             controllerAs: 'paginab'
           })
           .when('/dialogs', {
-            templateUrl: 'views/dialogs.html',
+            templateUrl: 'webapp/views/dialogs.html',
             controller: 'dialogsCtrl',
             controllerAs: 'dialogs'
           });
@@ -35,8 +37,8 @@
     }])
     .config(function($mdThemingProvider) {
       $mdThemingProvider.theme('default')
-        .primaryPalette('blue')
-        .accentPalette('pink');
+        .primaryPalette('teal')
+        .accentPalette('purple');
     })
     .config(function ($compileProvider){
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|http|ftp|mailto|file|tel):/);
@@ -46,10 +48,8 @@
       $translateProvider.preferredLanguage('en');
       $translateProvider.useSanitizeValueStrategy('escape');
       $translateProvider.useStaticFilesLoader({
-        prefix: 'languages/',
+        prefix: 'webapp/languages/',
         suffix: '.json'
       });
 
     });
-
-}(angular));
