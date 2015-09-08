@@ -20,7 +20,7 @@
     <body layout="column" ng-controller="AppCtrl">
 
         <md-toolbar layout="row">
-          <md-button ng-click="habilitaMenu('left')" class="md-icon-button menuBtn" max-ripple="1">
+          <md-button ng-click="habilitaMenu('left')" class="md-icon-button menuBtn accelerate" max-ripple="1">
             <ng-md-icon aria-label="Menu" icon="menu" ></ng-md-icon>
           </md-button>
           <h1 layout-align-gt-sm="center" class="md-toolbar-tools">Assemany Cordova Starter</h1>
@@ -56,7 +56,6 @@
                   </md-item-content>
                   <md-divider ></md-divider>
                 </md-item>
-
               </md-list>
             </md-sidenav>
 
@@ -67,14 +66,16 @@
             </div>
         </div>
 
-        <!-- Cordova/Phonegap Files -->
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+
 
         <!-- AngularJS Files -->
         <script type="text/javascript" src="js/vendor.min.js"></script>
         <script type="text/javascript" src="js/app.min.js"></script>
         <script type="text/javascript" src="js/acs.tpls.min.js"></script>
+
+        <!-- Cordova/Phonegap Files -->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
 
         <!-- Cordova/Phonegap initialize -->
         <script type="text/javascript">

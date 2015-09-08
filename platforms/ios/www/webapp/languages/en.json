@@ -1,0 +1,10 @@
+{
+  "MESSAGE": "Hello world",
+  "DIALOG_INTRODUCTION":"Open a dialog over the app's content. Press escape or click outside to close the dialog and send focus back to the triggering button.",
+  "ALERT":"Alert",
+  "CONFIRMATION_ALERT":"Confirmation Alert",
+  "PT_BR":"Brazilian Portuguese",
+  "EN":"English",
+  "ES":"Spanish",
+  "SELECT_LANGUAGE":"Select Language"
+}

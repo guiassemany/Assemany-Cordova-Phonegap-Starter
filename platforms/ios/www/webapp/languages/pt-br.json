@@ -1,0 +1,10 @@
+{
+  "MESSAGE": "Olá mundo!",
+  "DIALOG_INTRODUCTION":"Abra uma caixa de dialogo sobre o aplicativo. Clique fora para voltar o foco ao botão.",
+  "ALERT":"Alerta",
+  "CONFIRMATION_ALERT":"Alerta de confirmação",
+  "PT_BR":"Português do Brasil",
+  "EN":"Inglês",
+  "ES":"Espanhol",
+  "SELECT_LANGUAGE":"Selecione o Idioma"
+}

@@ -32,6 +32,7 @@
     "angular-touch": "~1.4.5",
     "angular-translate": "~2.7.2",
     "angular-translate-loader-static-files": "~2.7.2",
-    "fastclick": "~1.0.6"
+    "fastclick": "~1.0.6",
+    "ngCordova": "~0.1.20-alpha"
   }
 }

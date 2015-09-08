@@ -1,0 +1,10 @@
+{
+  "MESSAGE": "Hola Mundo!",
+  "DIALOG_INTRODUCTION":"Abrir un diálogo sobre el contenido de la aplicación. Presione escape o haga clic fuera para cerrar el diálogo y enviar foco de nuevo al botón de disparo.",
+  "ALERT":"Alerta",
+  "CONFIRMATION_ALERT":"Alerta Confirmación",
+  "PT_BR":"Portugués Brasileño",
+  "EN":"Inglés",
+  "ES":"Español",
+  "SELECT_LANGUAGE":"Seleccione idioma"
+}

@@ -29,7 +29,8 @@ gulp.task('vendors', function(){
         'www/lib/angular-translate/angular-translate.min.js',
         'www/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
         'www/lib/angular-touch/angular-touch.min.js',
-        'www/lib/fastclick/lib/fastclick.js'
+        'www/lib/fastclick/lib/fastclick.js',
+        'www/lib/ngCordova/dist/ng-cordova.min.js'
 
     ])
         .pipe(concat('vendor.min.js'))
@@ -67,7 +68,7 @@ gulp.task('watch', function() {
 });
 
 //Build the app by executing all tasks
-gulp.task('build', ['vendors', 'views', 'acs'])
+gulp.task('build', ['views', 'acs'])
 
 // Default Task
 gulp.task('default', ['watch']);
