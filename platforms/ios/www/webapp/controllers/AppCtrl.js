@@ -23,7 +23,13 @@ acs.controller('AppCtrl', ['$scope', '$mdSidenav', '$timeout','$log', '$location
                   nome: 'Camera',
                   icone: 'camera',
                   //iconeCor: 'pink',
-                  view: 'plugins/picture'
+                  view: '/plugin/camera'
+              },
+              {
+                  nome: 'Device Info',
+                  icone: 'perm_device_info',
+                  //iconeCor: 'pink',
+                  view: '/plugin/deviceInfo'
               },
             ];
 

@@ -2,22 +2,28 @@ acs.controller('AppCtrl', ['$scope', '$mdSidenav', '$timeout','$log', '$location
 
             var itensMenu = [
               {
-                  nome: 'View A',
-                  icone: 'grade',
+                  nome: 'Tabs',
+                  icone: 'tab',
                   //iconeCor: 'red',
-                  view: 'viewA'
+                  view: 'tabs'
               },
               {
-                  nome: 'View B',
-                  icone: 'done',
+                  nome: 'API Consume',
+                  icone: 'sync',
                   //iconeCor: 'pink',
-                  view: 'viewB'
+                  view: 'api'
               },
               {
                   nome: 'Dialogs',
                   icone: 'chat',
                   //iconeCor: 'pink',
                   view: 'dialogs'
+              },
+              {
+                  nome: 'Cards',
+                  icone: 'view_stream',
+                  //iconeCor: 'pink',
+                  view: '/cards'
               },
               {
                   nome: 'Camera',
@@ -30,7 +36,7 @@ acs.controller('AppCtrl', ['$scope', '$mdSidenav', '$timeout','$log', '$location
                   icone: 'perm_device_info',
                   //iconeCor: 'pink',
                   view: '/plugin/deviceInfo'
-              },
+              }
             ];
 
             $scope.selected = null;

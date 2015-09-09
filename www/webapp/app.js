@@ -15,20 +15,25 @@ var acs = angular.module('AssemanyCordovaStarter', [
     .config(['$routeProvider', '$locationProvider',
       function($routeProvider, $locationProvider) {
         $routeProvider
-          .when('/viewA', {
-            templateUrl: 'webapp/views/paginaA.html',
-            controller: 'PaginaACtrl',
-            controllerAs: 'pagina'
+          .when('/tabs', {
+            templateUrl: 'webapp/views/tabs.html',
+            controller: 'TabsCtrl',
+            controllerAs: 'tabs'
           })
-          .when('/viewB', {
-            templateUrl: 'webapp/views/paginaB.html',
-            controller: 'PaginaBCtrl',
-            controllerAs: 'paginab'
+          .when('/api', {
+            templateUrl: 'webapp/views/api-consume.html',
+            controller: 'ApiConsumeCtrl',
+            controllerAs: 'apicons'
           })
           .when('/dialogs', {
             templateUrl: 'webapp/views/dialogs.html',
             controller: 'dialogsCtrl',
             controllerAs: 'dialogs'
+          })
+          .when('/cards', {
+            templateUrl: 'webapp/views/cards.html',
+            controller: 'CardsCtrl',
+            controllerAs: 'cards'
           })
           .when('/plugin/camera', {
             templateUrl: 'webapp/views/plugins/picture.html',
@@ -39,8 +44,7 @@ var acs = angular.module('AssemanyCordovaStarter', [
             templateUrl: 'webapp/views/plugins/deviceInfo.html',
             controller: 'DeviceInfoCtrl',
             controllerAs: 'device'
-          })
-          ;
+          });
 
 
         $routeProvider.otherwise({redirectTo: '/viewA'});

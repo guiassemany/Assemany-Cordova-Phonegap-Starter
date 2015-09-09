@@ -1,23 +1,29 @@
-acs.controller('PictureCtrl', function($scope, $cordovaCamera) {
+acs.controller('PictureCtrl', [ '$scope', '$cordovaCamera', function($scope, $cordovaCamera) {
 
-  document.addEventListener("deviceready", function () {
-
+  $scope.takePicture = function() {
     var options = {
+      quality: 100,
       destinationType: Camera.DestinationType.FILE_URI,
       sourceType: Camera.PictureSourceType.CAMERA,
+      allowEdit: false,
+      encodingType: Camera.EncodingType.JPEG,
+      //targetWidth: 300,
+      //targetHeight: 300,
+      popoverOptions: CameraPopoverOptions,
+      saveToPhotoAlbum: false
     };
 
-    $cordovaCamera.getPicture(options).then(function(imageURI) {
+    $cordovaCamera.getPicture(options).then(function(imageData) {
       var image = document.getElementById('myImage');
-      image.src = imageURI;
+      image.src = imageData;
     }, function(err) {
       // error
     });
+  }
 
+  $scope.cleanPicture = function() {
+    var image = document.getElementById('myImage');
+    image.src = 'img/no-picture.png';
+  }
 
-    $cordovaCamera.cleanup().then(
-      console.log('teste');
-    ); // only for FILE_URI
-
-  }, false);
-});
+}]);

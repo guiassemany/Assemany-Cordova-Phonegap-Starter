@@ -34,7 +34,13 @@ var acs = angular.module('AssemanyCordovaStarter', [
             templateUrl: 'webapp/views/plugins/picture.html',
             controller: 'PictureCtrl',
             controllerAs: 'picture'
-          });
+          })
+          .when('/plugin/deviceInfo', {
+            templateUrl: 'webapp/views/plugins/deviceInfo.html',
+            controller: 'DeviceInfoCtrl',
+            controllerAs: 'device'
+          })
+          ;
 
 
         $routeProvider.otherwise({redirectTo: '/viewA'});
@@ -44,7 +50,7 @@ var acs = angular.module('AssemanyCordovaStarter', [
     .config(function($mdThemingProvider) {
       $mdThemingProvider.theme('default')
         .primaryPalette('teal')
-        .accentPalette('purple');
+        .accentPalette('deep-orange');
     })
     .config(function ($compileProvider){
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|http|ftp|mailto|file|tel):/);
