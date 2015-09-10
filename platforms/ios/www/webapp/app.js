@@ -15,20 +15,30 @@ var acs = angular.module('AssemanyCordovaStarter', [
     .config(['$routeProvider', '$locationProvider',
       function($routeProvider, $locationProvider) {
         $routeProvider
-          .when('/viewA', {
-            templateUrl: 'webapp/views/paginaA.html',
-            controller: 'PaginaACtrl',
-            controllerAs: 'pagina'
+          .when('/dashboard', {
+            templateUrl: 'webapp/views/dashboard.html',
+            controller: 'DashboardCtrl',
+            controllerAs: 'dashboard'
           })
-          .when('/viewB', {
-            templateUrl: 'webapp/views/paginaB.html',
-            controller: 'PaginaBCtrl',
-            controllerAs: 'paginab'
+          .when('/tabs', {
+            templateUrl: 'webapp/views/tabs.html',
+            controller: 'TabsCtrl',
+            controllerAs: 'tabs'
+          })
+          .when('/api', {
+            templateUrl: 'webapp/views/api-consume.html',
+            controller: 'ApiConsumeCtrl',
+            controllerAs: 'apicons'
           })
           .when('/dialogs', {
             templateUrl: 'webapp/views/dialogs.html',
             controller: 'dialogsCtrl',
             controllerAs: 'dialogs'
+          })
+          .when('/cards', {
+            templateUrl: 'webapp/views/cards.html',
+            controller: 'CardsCtrl',
+            controllerAs: 'cards'
           })
           .when('/plugin/camera', {
             templateUrl: 'webapp/views/plugins/picture.html',
@@ -40,10 +50,14 @@ var acs = angular.module('AssemanyCordovaStarter', [
             controller: 'DeviceInfoCtrl',
             controllerAs: 'device'
           })
-          ;
+          .when('/auth/login', {
+            templateUrl: 'webapp/views/auth/login.html',
+            controller: 'LoginCtrl',
+            controllerAs: 'login'
+          });
 
 
-        $routeProvider.otherwise({redirectTo: '/viewA'});
+        $routeProvider.otherwise({redirectTo: '/tabs'});
         //$locationProvider.html5Mode(true);
 
     }])

@@ -1,4 +1,4 @@
-acs.controller('PaginaBCtrl', function(Post) {
+acs.controller('ApiConsumeCtrl', function(Post) {
 
   var vm = this;
 

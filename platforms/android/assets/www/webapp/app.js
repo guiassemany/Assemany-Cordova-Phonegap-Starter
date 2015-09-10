@@ -15,6 +15,11 @@ var acs = angular.module('AssemanyCordovaStarter', [
     .config(['$routeProvider', '$locationProvider',
       function($routeProvider, $locationProvider) {
         $routeProvider
+          .when('/dashboard', {
+            templateUrl: 'webapp/views/dashboard.html',
+            controller: 'DashboardCtrl',
+            controllerAs: 'dashboard'
+          })
           .when('/tabs', {
             templateUrl: 'webapp/views/tabs.html',
             controller: 'TabsCtrl',
@@ -44,10 +49,15 @@ var acs = angular.module('AssemanyCordovaStarter', [
             templateUrl: 'webapp/views/plugins/deviceInfo.html',
             controller: 'DeviceInfoCtrl',
             controllerAs: 'device'
+          })
+          .when('/auth/login', {
+            templateUrl: 'webapp/views/auth/login.html',
+            controller: 'LoginCtrl',
+            controllerAs: 'login'
           });
 
 
-        $routeProvider.otherwise({redirectTo: '/viewA'});
+        $routeProvider.otherwise({redirectTo: '/tabs'});
         //$locationProvider.html5Mode(true);
 
     }])

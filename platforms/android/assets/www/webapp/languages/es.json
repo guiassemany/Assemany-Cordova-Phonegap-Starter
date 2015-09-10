@@ -6,5 +6,13 @@
   "PT_BR":"Portugués Brasileño",
   "EN":"Inglés",
   "ES":"Español",
-  "SELECT_LANGUAGE":"Seleccione idioma"
+  "SELECT_LANGUAGE":"Seleccione idioma",
+  "DASHBOARD" : "Dashboard",
+  "TABS" : "Tabs",
+  "RESTFULL_TEST" : "Restfull Test",
+  "DIALOGS":"Diálogos",
+  "CARDS":"TARJETAS",
+  "CAMERA":"CÁMARA",
+  "DEVICE_INFO":"Información del dispositivo",
+  "LOGIN":"Login"
 }

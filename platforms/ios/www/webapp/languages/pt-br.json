@@ -6,5 +6,13 @@
   "PT_BR":"Português do Brasil",
   "EN":"Inglês",
   "ES":"Espanhol",
-  "SELECT_LANGUAGE":"Selecione o Idioma"
+  "SELECT_LANGUAGE":"Selecione o Idioma",
+  "DASHBOARD" : "Painel",
+  "TABS" : "Abas",
+  "RESTFULL_TEST" : "Teste Restfull",
+  "DIALOGS":"Diálogos",
+  "CARDS":"Cartões",
+  "CAMERA":"Câmera",
+  "DEVICE_INFO":"Informações do Dispositivo",
+  "LOGIN":"Entrar"
 }

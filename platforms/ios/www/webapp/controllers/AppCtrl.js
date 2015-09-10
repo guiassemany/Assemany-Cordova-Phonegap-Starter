@@ -1,36 +1,47 @@
-acs.controller('AppCtrl', ['$scope', '$mdSidenav', '$timeout','$log', '$location', '$translate',  function($scope, $mdSidenav, $timeout, $log, $location, $translate) {
-
+acs.controller('AppCtrl', ['$scope', '$mdSidenav', '$timeout','$log', '$location', '$translate', '$filter',  function($scope, $mdSidenav, $timeout, $log, $location, $translate, $filter) {
             var itensMenu = [
               {
-                  nome: 'View A',
-                  icone: 'grade',
-                  //iconeCor: 'red',
-                  view: 'viewA'
-              },
-              {
-                  nome: 'View B',
-                  icone: 'done',
+                  nome: 'DASHBOARD',
+                  icone: 'dashboard',
                   //iconeCor: 'pink',
-                  view: 'viewB'
+                  view: '/dashboard'
               },
               {
-                  nome: 'Dialogs',
+                  nome: 'TABS',
+                  icone: 'tab',
+                  //iconeCor: 'red',
+                  view: 'tabs'
+              },
+              {
+                  nome: 'RESTFULL_TEST',
+                  icone: 'sync',
+                  //iconeCor: 'pink',
+                  view: 'api'
+              },
+              {
+                  nome: 'DIALOGS',
                   icone: 'chat',
                   //iconeCor: 'pink',
                   view: 'dialogs'
               },
               {
-                  nome: 'Camera',
+                  nome: 'CARDS',
+                  icone: 'view_stream',
+                  //iconeCor: 'pink',
+                  view: '/cards'
+              },
+              {
+                  nome: 'CAMERA',
                   icone: 'camera',
                   //iconeCor: 'pink',
                   view: '/plugin/camera'
               },
               {
-                  nome: 'Device Info',
+                  nome: 'DEVICE_INFO',
                   icone: 'perm_device_info',
                   //iconeCor: 'pink',
                   view: '/plugin/deviceInfo'
-              },
+              }
             ];
 
             $scope.selected = null;
@@ -46,6 +57,7 @@ acs.controller('AppCtrl', ['$scope', '$mdSidenav', '$timeout','$log', '$location
             function selecionaItem(itemView) {
               $scope.selected = angular.isNumber(itemView) ? $scope.itensMenu[itemView.index] : itemView;
               $location.path(itemView);
+              hideToolbar(itemView);
               $scope.habilitaMenu('left');
             }
 

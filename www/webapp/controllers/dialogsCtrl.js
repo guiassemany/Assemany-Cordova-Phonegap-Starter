@@ -20,7 +20,7 @@ acs.controller('dialogsCtrl', ['$scope', '$mdDialog', '$filter', function($scope
     var confirm = $mdDialog.confirm()
           .title($filter('translate')('MESSAGE'))
           .content('Escolha uma das opções.')
-          .ariaLabel('Lucky day')
+          .ariaLabel('Teste')
           .ok('Sim!')
           .cancel('Não')
           .targetEvent(ev);

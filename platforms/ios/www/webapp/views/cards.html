@@ -1,14 +1,45 @@
-<md-card ng-repeat="card in cards">
+<md-card ng-repeat="card in allCards" md-swipe-right="delete(card)" md-swipe-left="delete(card)">
       <!-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> -->
       <md-card-content>
         <h2 class="md-title">{{card.title}}</h2>
         <p>
-          The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-          two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          {{card.text}}
         </p>
+        <span class="md-caption"> You can swipe left or right to delete this card or click on the menu on the right and click delete. </span>
       </md-card-content>
       <div class="md-actions" layout="row" layout-align="end center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
+        <div>
+          <md-button class="md-icon-button md-accent" aria-label="favorite">
+            <ng-md-icon icon="favorite"></ng-md-icon>
+          </md-button>
+        </div>
+        <div>
+          <md-menu>
+          <md-button ng-click="openMenu($mdOpenMenu, $event)" class="md-icon-button" aria-label="More Options">
+            <ng-md-icon md-menu-origin icon="more_vert"></ng-md-icon>
+          </md-button>
+          <md-menu-content width="4">
+        <md-menu-item>
+          <md-button ng-click="edit($event)" aria-label="Edit card">
+            <ng-md-icon icon="edit" md-menu-align-target></ng-md-icon>
+            Edit
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button disabled="disabled" aria-label="Disabled comment card" >
+            <ng-md-icon icon="comment"></ng-md-icon>
+              Comment
+          </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-button ng-click="delete(card)" aria-label="Delete Card">
+            <ng-md-icon icon="delete"></ng-md-icon>
+            Delete
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+        </div>
       </div>
 </md-card>
