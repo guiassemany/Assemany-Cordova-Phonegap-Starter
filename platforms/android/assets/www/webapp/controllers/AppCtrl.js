@@ -57,7 +57,6 @@ acs.controller('AppCtrl', ['$scope', '$mdSidenav', '$timeout','$log', '$location
             function selecionaItem(itemView) {
               $scope.selected = angular.isNumber(itemView) ? $scope.itensMenu[itemView.index] : itemView;
               $location.path(itemView);
-              hideToolbar(itemView);
               $scope.habilitaMenu('left');
             }
 
