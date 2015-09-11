@@ -30,6 +30,11 @@ var acs = angular.module('AssemanyCordovaStarter', [
             controller: 'ApiConsumeCtrl',
             controllerAs: 'apicons'
           })
+          .when('/api/cars', {
+            templateUrl: 'webapp/views/cars.html',
+            controller: 'CarsCtrl',
+            controllerAs: 'cars'
+          })
           .when('/dialogs', {
             templateUrl: 'webapp/views/dialogs.html',
             controller: 'dialogsCtrl',

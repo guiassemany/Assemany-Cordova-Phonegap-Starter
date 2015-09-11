@@ -1,0 +1,19 @@
+<div layout="row" layout-align="start center">
+  <div>
+    <md-button class="md-icon-button" aria-label="Go Back" ng-click="posts.util.linkTo('api')">
+      <ng-md-icon aria-label="Back" icon="keyboard_backspace" ></ng-md-icon>
+    </md-button>
+  </div>
+  <div>
+    <h1>{{ 'MESSAGE' | translate }}</h1>
+  </div>
+</div>
+<md-list>
+      <md-list-item class="md-3-line" ng-repeat = "post in posts.posts">
+        <div class="md-list-item-text">
+          <h3>Título: {{post.title}}</h3>
+          <p>{{post.body}}</p>
+        </div>
+        <md-divider ng-if="!$last"></md-divider>
+      </md-list-item>
+</md-list>

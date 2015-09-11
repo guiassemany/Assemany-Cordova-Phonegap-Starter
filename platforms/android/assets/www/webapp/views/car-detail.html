@@ -1,0 +1,39 @@
+<div layout="row" layout-align="start center">
+  <div>
+    <md-button class="md-icon-button" aria-label="Go Back" ng-click="car.util.linkTo('api/cars')">
+      <ng-md-icon aria-label="Back" icon="keyboard_backspace" ></ng-md-icon>
+    </md-button>
+  </div>
+  <div>
+    <h1>{{car.car.title}}</h1>
+  </div>
+</div>
+<md-divider></md-divider>
+<md-tabs md-dynamic-height md-border-bottom>
+     <md-tab label="General Information">
+       <md-content class="md-padding">
+         <h1 class="md-display-2"></h1>
+         <img ng-src="{{car.car.mainImage}}" class="md-card-image" alt="{{car.car.title}}">
+         <p>{{car.car.description}}</p>
+       </md-content>
+     </md-tab>
+     <md-tab label="Curiosities">
+       <md-content class="md-padding">
+         <md-card ng-repeat="fact in car.car.facts">
+          <md-card-content>
+            <h3>{{fact.title}}</h3>
+            <p>{{fact.text}}</p>
+          </md-card-content>
+         </md-card>
+       </md-content>
+     </md-tab>
+     <md-tab label="Images">
+       <md-content class="md-padding">
+         <md-card ng-repeat="image in car.car.images">
+          <md-card-content>
+            <img ng-src="{{image.url}}" class="md-card-image" alt="{{image.title}}">
+          </md-card-content>
+         </md-card>
+       </md-content>
+     </md-tab>
+   </md-tabs>

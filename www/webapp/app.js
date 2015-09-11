@@ -26,9 +26,24 @@ var acs = angular.module('AssemanyCordovaStarter', [
             controllerAs: 'tabs'
           })
           .when('/api', {
-            templateUrl: 'webapp/views/api-consume.html',
-            controller: 'ApiConsumeCtrl',
-            controllerAs: 'apicons'
+            templateUrl: 'webapp/views/api.html',
+            controller: 'ApiCtrl',
+            controllerAs: 'api'
+          })
+          .when('/api/posts', {
+            templateUrl: 'webapp/views/posts.html',
+            controller: 'PostsCtrl',
+            controllerAs: 'posts'
+          })
+          .when('/api/cars', {
+            templateUrl: 'webapp/views/cars.html',
+            controller: 'CarsCtrl',
+            controllerAs: 'cars'
+          })
+          .when('/api/car/:carId', {
+            templateUrl: 'webapp/views/car-detail.html',
+            controller: 'CarCtrl',
+            controllerAs: 'car'
           })
           .when('/dialogs', {
             templateUrl: 'webapp/views/dialogs.html',
