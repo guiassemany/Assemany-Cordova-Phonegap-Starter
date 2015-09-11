@@ -154,7 +154,8 @@ To include a new Vendor, read the FAQ Below.
 
 * If possible, include it on you bower.json file then run `bower update` to download the vendor's files. If the vendor cannot be installed with bower, put the folder with the needed js file inside the `www/lib` directory.
 * Open the file `gulpfile.js` and add the path to the vendor js file on the vendors array
-``` gulp gulp.task('vendors', function(){
+```gulp
+gulp.task('vendors', function(){
 gulp.src([
 'www/lib/angular/angular.min.js',
 'www/lib/angular-aria/angular-aria.min.js',
