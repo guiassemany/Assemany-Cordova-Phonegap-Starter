@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Assemany Cordova/Phonegap Starter by guiassemany</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Assemany Cordova/Phonegap Starter</h1>
+        <h2>Quickstart your next Cordova/Phonegap app!</h2>
+        <a href="https://github.com/guiassemany/Assemany-Cordova-Phonegap-Starter" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="assemany-cordovaphonegap-starter" class="anchor" href="#assemany-cordovaphonegap-starter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assemany Cordova/Phonegap Starter</h1>
+
+<h2>
+<a id="what-is-it" class="anchor" href="#what-is-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is it?</h2>
+
+<p>This is a repo for a starter application featuring the acclaimed front-end framework AngularJS and the Cordova/Phonegap technology to make Hybrid Apps. Just clone this repo, install and you have a good foundation for building any application.</p>
+
+<h4>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features:</h4>
+
+<ul>
+<li>Material Design - Angular Material (<a href="https://material.angularjs.org/">https://material.angularjs.org/</a>)</li>
+<li>Gulp Tasks to minify the app. (<a href="http://gulpjs.com/">http://gulpjs.com/</a>)</li>
+<li>Translation Ready.</li>
+</ul>
+
+<h4>
+<a id="things-todo" class="anchor" href="#things-todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Things Todo</h4>
+
+<ul>
+<li>Translate all sentences.</li>
+<li>Improve performance.</li>
+<li>Create a Dashboard page.</li>
+<li>Create a Login Page.</li>
+<li>Create more Restful Tests and improve the existing ones.</li>
+<li>Create more examples with Device plugins.</li>
+<li>Upload the image taken from camera to a server.</li>
+<li>Create at least one example of every Angular Material Feature.</li>
+<li>Improve Gulp Tasks.</li>
+</ul>
+
+<h2>
+<a id="how-to-install" class="anchor" href="#how-to-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to install</h2>
+
+<p>Installation process is very simple.</p>
+
+<p>You must have:</p>
+
+<ul>
+<li>
+<a href="https://nodejs.org/en/download/">node/npm</a>,</li>
+<li>
+<a href="http://git-scm.org/">git</a>,</li>
+<li>Bower</li>
+<li>Gulp.</li>
+</ul>
+
+<p>And I recommend installing Bower and Gulp globally: (If you already have these tools, running this command will update them.)</p>
+
+<pre lang="code"><code>npm install -g bower
+</code></pre>
+
+<pre lang="code"><code>npm install -g gulp
+</code></pre>
+
+<h4>
+<a id="with-these-tools-ready-go-inside-the-project-directory" class="anchor" href="#with-these-tools-ready-go-inside-the-project-directory" aria-hidden="true"><span class="octicon octicon-link"></span></a>With these tools ready, go inside the project directory</h4>
+
+<pre lang="code"><code>cd Assemany-Cordova-Phonegap-Starter (Or the directory you put the files in)
+</code></pre>
+
+<p>And run:</p>
+
+<pre lang="code"><code>npm install
+</code></pre>
+
+<p>And after that</p>
+
+<pre lang="code"><code>bower install
+</code></pre>
+
+<p>And thats it. You can start developing you own app.</p>
+
+<h2>
+<a id="basic-development-workflow" class="anchor" href="#basic-development-workflow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Development Workflow</h2>
+
+<p>Open the terminal at project folder:</p>
+
+<p>Run: <code>gulp watch</code> - Read below for more information about this task.</p>
+
+<p>Run: <code>phonegap serve</code> or <code>cordova serve</code> to view the app on browser.</p>
+
+<p>If you want to preview on your phone, read the section below.</p>
+
+<p>Edit/Create files as you normally would with your favorite editor/IDE.</p>
+
+<p>All changes detected will trigger a specific gulp task to compile the necessary files for the app.</p>
+
+<p>If previewing on browser, the browser will automatically reload after a change was made. This feature <strong>will not</strong> work with <code>cordova serve</code>. I will try to fix it later.</p>
+
+<h2>
+<a id="device-preview" class="anchor" href="#device-preview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Device Preview</h2>
+
+<p>Make sure to add the platform you wish, but before, check if its not already added.</p>
+
+<p>With these commands you can verify which platforms are installed and available:</p>
+
+<ul>
+<li>
+<code>phonegap platform ls</code> or <code>cordova platform ls</code>
+</li>
+</ul>
+
+<p><strong>Note: If you are on a windows machine, you can remove iOS platform by running <code>phonegap platform rm ios</code> or <code>cordova platform rm ios</code></strong></p>
+
+<p>And then, if your device is plugged in your computer, with proper configurations(SDK, Debug Mode), running the commands bellow will install the app on your device.</p>
+
+<p>If no device is found, then you will need to have an emulator for the desired platform.</p>
+
+<ul>
+<li><code>cordova run android</code></li>
+<li><code>phonegap run android</code></li>
+<li><code>cordova run ios</code></li>
+<li><code>phonegap run ios</code></li>
+</ul>
+
+<p>In case you are using Phonegap, an alternative is to download the <a href="http://app.phonegap.com/">Phonegap Developer App</a>. It is a fast way to preview apps on your phone skipping all the needed configs.</p>
+
+<h2>
+<a id="available-gulp-tasks" class="anchor" href="#available-gulp-tasks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Available Gulp Tasks</h2>
+
+<h3>
+<a id="gulp-watch" class="anchor" href="#gulp-watch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gulp Watch</h3>
+
+<pre lang="code"><code>gulp watch
+</code></pre>
+
+<p>This command will watch for file changes at:</p>
+
+<ul>
+<li>www/webapp/**/*.js - If a file change here, it will automatically execute <code>gulp acs</code>
+</li>
+<li>www/webapp/views/**/*.html - If a file change here, it will automatically execute <code>gulp views</code>
+</li>
+<li>www/lib/* - If a file change here, it will automatically execute <code>gulp vendors</code>
+</li>
+</ul>
+
+<p>If any changes are detected, the respective task will be called.</p>
+
+<hr>
+
+<h3>
+<a id="gulp-build" class="anchor" href="#gulp-build" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gulp Build</h3>
+
+<pre lang="code"><code>gulp build
+</code></pre>
+
+<p>This task will run gulp acs and gulp views.</p>
+
+<hr>
+
+<h3>
+<a id="gulp-acs" class="anchor" href="#gulp-acs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gulp Acs</h3>
+
+<pre lang="code"><code>gulp acs
+</code></pre>
+
+<p>This taks will compile all Javascript of the application (That can be found here -&gt; 'www/webapp') into a single file called 'app.min.js' that will be located at 'www/js' folder.
+Thats that only file we need to call on our index.html.</p>
+
+<p>If you edit your js files, dont forget to run this task. Of course, if you are running <strong>gulp watch</strong>, the views will be automatically compiled when a change is detected.</p>
+
+<hr>
+
+<h3>
+<a id="gulp-views" class="anchor" href="#gulp-views" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gulp Views</h3>
+
+<pre lang="code"><code>gulp views
+</code></pre>
+
+<p>This task will compile the views into a single file called 'acs.tpls.min.js'. The application will look for this file when point to a view. In this case, we are using angular-template-cache to make things faster.</p>
+
+<p>If you change your views, dont forget to run this task. Of course, if you are running <strong>gulp watch</strong>, the views will be automatically compiled when a change is detected.</p>
+
+<hr>
+
+<h3>
+<a id="gulp-vendors" class="anchor" href="#gulp-vendors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gulp Vendors</h3>
+
+<pre lang="code"><code>gulp vendors
+</code></pre>
+
+<p>This task will compile all vendors js files into a single file called <code>vendors.min.js</code>. Thats the only file we need to call on our index.html to import all vendors files.</p>
+
+<p>To include a new Vendor, read the FAQ Below.</p>
+
+<h2>
+<a id="faq" class="anchor" href="#faq" aria-hidden="true"><span class="octicon octicon-link"></span></a>FAQ</h2>
+
+<h3>
+<a id="how-do-i-add-a-new-vendor" class="anchor" href="#how-do-i-add-a-new-vendor" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do I add a new Vendor?</h3>
+
+<ul>
+<li>If possible, include it on you bower.json file then run <code>bower update</code> to download the vendor's files. If the vendor cannot be installed with bower, put the folder with the needed js file inside the <code>www/lib</code> directory.</li>
+<li>Open the file <code>gulpfile.js</code> and add the path to the vendor js file on the vendors array</li>
+</ul>
+
+<pre lang="gulp"><code>gulp.task('vendors', function(){
+gulp.src([
+'www/lib/angular/angular.min.js',
+'www/lib/angular-aria/angular-aria.min.js',
+'....',
+'www/lib/Path_to_Your_new_vendor_js_file'
+])
+...
+</code></pre>
+
+<ul>
+<li>Run <code>gulp vendors</code> to compile all the vendors into a single file called <code>vendors.min.js</code>. After compiled, this file can be found at <code>www/js/</code>.</li>
+<li>The file <code>vendors.min.js</code> is already added to the index.html, so you dont have to worry about including it.</li>
+</ul>
+
+<h3>
+<a id="why-npm-install" class="anchor" href="#why-npm-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why <code>npm install</code>?</h3>
+
+<p>Install these Dependencies on 'node_modules' folder</p>
+
+<ul>
+<li>gulp</li>
+<li>gulp-add-src</li>
+<li>gulp-angular-templatecache</li>
+<li>gulp-concat</li>
+<li>gulp-jshint</li>
+<li>gulp-less</li>
+<li>gulp-minify-css</li>
+<li>gulp-minify-html</li>
+<li>gulp-ng-annotate</li>
+<li>gulp-notify</li>
+<li>gulp-rename</li>
+<li>gulp-shell</li>
+<li>gulp-uglify</li>
+</ul>
+
+<p>Read the Gulp tasks sections to find more information about it.</p>
+
+<h3>
+<a id="why-bower-install-" class="anchor" href="#why-bower-install-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why <code>bower install</code> ?</h3>
+
+<p>Install these Dependencies on 'www/lib' folder</p>
+
+<ul>
+<li>angular-animate</li>
+<li>angular-material</li>
+<li>angular-material-icons</li>
+<li>angular-resource</li>
+<li>angular-route</li>
+<li>angular-sanitize</li>
+<li>angular-touch</li>
+<li>angular-translate</li>
+<li>angular-translate-loader-static-files</li>
+<li>fastclick</li>
+<li>ngCordova</li>
+</ul>
+
+<h2>
+<a id="credits-and-license" class="anchor" href="#credits-and-license" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits and License</h2>
+
+<p>Guilherme Assemany (<a href="http://assemany.com/">http://assemany.com/</a>) created this!  </p>
+
+<p>Contributors:</p>
+
+<ul>
+<li>Guilherme Assemany (<a href="http://assemany.com/">http://assemany.com/</a>)</li>
+<li>Feel free to join me! :)</li>
+</ul>
+
+<p>This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/guiassemany/Assemany-Cordova-Phonegap-Starter/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/guiassemany/Assemany-Cordova-Phonegap-Starter/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/guiassemany/Assemany-Cordova-Phonegap-Starter"></a> is maintained by <a href="https://github.com/guiassemany">guiassemany</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-57167317-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
