@@ -1,5 +1,10 @@
 # Assemany Cordova/Phonegap Starter
 
+## Screenshots
+<img src="http://assemany.com/projeto/acs/pic1.png" width="130">
+<img src="http://assemany.com/projeto/acs/pic2.png" width="130">
+<img src="http://assemany.com/projeto/acs/pic3.png" width="130">
+<img src="http://assemany.com/projeto/acs/pic4.png" width="130">
 
 ## What is it?
 
