@@ -1,6 +1,6 @@
 acs.factory('CarService', function() {
   // Might use a resource here that returns a JSON array
-
+  // I'll do it later =)
   // Some fake testing data
   var cars = [
     {
@@ -78,7 +78,6 @@ acs.factory('CarService', function() {
       return cars;
     },
     get: function(carId) {
-      // Simple index lookup
       return cars[carId];
     }
   }

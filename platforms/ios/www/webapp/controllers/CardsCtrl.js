@@ -1,6 +1,6 @@
-acs.controller('CardsCtrl', [ '$scope', '$mdDialog', function($scope, $mdDialog) {
-
-  $scope.allCards = [
+acs.controller('CardsCtrl', ['$mdDialog', function($mdDialog) {
+  var vm = this;
+  vm.allCards = [
     {
       "title": "Fiscolas",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada aliquam ante, sit amet commodo mi iaculis et. Morbi sed lectus lectus."
@@ -21,17 +21,17 @@ acs.controller('CardsCtrl', [ '$scope', '$mdDialog', function($scope, $mdDialog)
 
   var originatorEv;
 
-    $scope.openMenu = function($mdOpenMenu, ev) {
+    vm.openMenu = function($mdOpenMenu, ev) {
       originatorEv = ev;
       $mdOpenMenu(ev);
     };
 
-    $scope.addCard = function(card){
-        $scope.allCards.push(card);
-        $scope.newCard = null;
+    vm.addCard = function(card){
+        vm.allCards.push(card);
+        vm.newCard = null;
       }
 
-    $scope.edit = function() {
+    vm.edit = function() {
       $mdDialog.show(
         $mdDialog.alert()
           .targetEvent(originatorEv)
@@ -45,11 +45,11 @@ acs.controller('CardsCtrl', [ '$scope', '$mdDialog', function($scope, $mdDialog)
       originatorEv = null;
     };
 
-    $scope.delete = function(card){
-      var index = $scope.allCards.indexOf(card);
-      $scope.allCards.splice(index, 1);
+    vm.delete = function(card){
+      var index = vm.allCards.indexOf(card);
+      vm.allCards.splice(index, 1);
     };
 
-  //console.log($scope.allCards);
+  //console.log(vm.allCards);
 
 }]);

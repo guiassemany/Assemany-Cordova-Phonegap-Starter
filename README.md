@@ -7,14 +7,24 @@ This is a repo for a starter application featuring the acclaimed front-end frame
 
 #### Features:
 
-* Angular Material (https://material.angularjs.org/)
-* Gulp (http://gulpjs.com/)
-* Best Angular Modules.
+* Material Design - Angular Material (https://material.angularjs.org/)
+* Gulp Tasks to minify the app. (http://gulpjs.com/)
+* Translation Ready.
 
+#### Things Todo
+* Translate all sentences.
+* Improve performance.
+* Create a Dashboard page.
+* Create a Login Page.
+* Create more Restful Tests and improve the existing ones.
+* Create more examples with Device plugins.
+* Upload the image taken from camera to a server.
+* Create at least one example of every Angular Material Feature.
+* Improve Gulp Tasks.
 
 ## How to install
 
-Installation proccess is very simple.
+Installation process is very simple.
 
 You must have:
 * [node/npm](https://nodejs.org/en/download/),
@@ -202,3 +212,17 @@ Install these Dependencies on 'www/lib' folder
 * angular-translate-loader-static-files
 * fastclick
 * ngCordova
+
+
+## Credits and License ##
+
+Guilherme Assemany (<http://assemany.com/>) created this!  
+
+Contributors:
+
+- Guilherme Assemany (<http://assemany.com/>)
+- Feel free to join me! :)
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation.

@@ -7,18 +7,18 @@
   </p>
 
   <div layout="row" layout-wrap >
-    <md-button class="md-primary md-raised" ng-click="showAlert($event)" flex="45">
+    <md-button class="md-primary md-raised" ng-click="dialogs.showAlert($event)" flex="45">
       {{ 'ALERT' | translate }}
     </md-button>
-    <md-button class="md-primary md-raised" ng-click="showConfirm($event)" flex="45">
+    <md-button class="md-primary md-raised" ng-click="dialogs.showConfirm($event)" flex="45">
       {{ 'CONFIRMATION_ALERT' | translate }}
     </md-button>
   </div>
 
-  <div ng-if="status">
+  <div ng-if="dialogs.status">
     <br/>
     <b layout="row" layout-align="center center" class="md-padding">
-      {{status}}
+      {{dialogs.status}}
     </b>
   </div>
 </div>

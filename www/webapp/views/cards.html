@@ -1,4 +1,4 @@
-<md-card ng-repeat="card in allCards" md-swipe-right="delete(card)" md-swipe-left="delete(card)">
+<md-card ng-repeat="card in cards.allCards" md-swipe-right="cards.delete(card)" md-swipe-left="cards.delete(card)">
       <!-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> -->
       <md-card-content>
         <h2 class="md-title">{{card.title}}</h2>
@@ -15,12 +15,12 @@
         </div>
         <div>
           <md-menu>
-          <md-button ng-click="openMenu($mdOpenMenu, $event)" class="md-icon-button" aria-label="More Options">
+          <md-button ng-click="cards.openMenu($mdOpenMenu, $event)" class="md-icon-button" aria-label="More Options">
             <ng-md-icon md-menu-origin icon="more_vert"></ng-md-icon>
           </md-button>
           <md-menu-content width="4">
         <md-menu-item>
-          <md-button ng-click="edit($event)" aria-label="Edit card">
+          <md-button ng-click="cards.edit($event)" aria-label="Edit card">
             <ng-md-icon icon="edit" md-menu-align-target></ng-md-icon>
             Edit
           </md-button>
@@ -33,7 +33,7 @@
         </md-menu-item>
         <md-menu-divider></md-menu-divider>
         <md-menu-item>
-          <md-button ng-click="delete(card)" aria-label="Delete Card">
+          <md-button ng-click="cards.delete(card)" aria-label="Delete Card">
             <ng-md-icon icon="delete"></ng-md-icon>
             Delete
           </md-button>

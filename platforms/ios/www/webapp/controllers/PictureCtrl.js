@@ -1,6 +1,8 @@
-acs.controller('PictureCtrl', [ '$scope', '$cordovaCamera', function($scope, $cordovaCamera) {
+acs.controller('PictureCtrl', [ '$cordovaCamera', function($cordovaCamera) {
 
-  $scope.takePicture = function() {
+  var vm = this;
+
+  vm.takePicture = function() {
     var options = {
       quality: 100,
       destinationType: Camera.DestinationType.FILE_URI,
@@ -21,7 +23,7 @@ acs.controller('PictureCtrl', [ '$scope', '$cordovaCamera', function($scope, $co
     });
   }
 
-  $scope.cleanPicture = function() {
+  vm.cleanPicture = function() {
     var image = document.getElementById('myImage');
     image.src = 'img/no-picture.png';
   }

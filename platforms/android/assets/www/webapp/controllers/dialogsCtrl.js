@@ -1,9 +1,10 @@
-acs.controller('dialogsCtrl', ['$scope', '$mdDialog', '$filter', function($scope, $mdDialog, $filter) {
-  $scope.status = '  ';
-  $scope.showAlert = function(ev) {
-    // Appending dialog to document.body to cover sidenav in docs app
-    // Modal dialogs should fully cover application
-    // to prevent interaction outside of dialog
+acs.controller('dialogsCtrl', ['$mdDialog', '$filter', function($mdDialog, $filter) {
+
+  var vm = this;
+
+  vm.status = ' ';
+
+  vm.showAlert = function(ev) {
     $mdDialog.show(
       $mdDialog.alert()
         .parent(angular.element(document.querySelector('#popupContainer')))
@@ -15,7 +16,8 @@ acs.controller('dialogsCtrl', ['$scope', '$mdDialog', '$filter', function($scope
         .targetEvent(ev)
     );
   };
-  $scope.showConfirm = function(ev) {
+
+  vm.showConfirm = function(ev) {
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.confirm()
           .title($filter('translate')('MESSAGE'))
@@ -25,9 +27,14 @@ acs.controller('dialogsCtrl', ['$scope', '$mdDialog', '$filter', function($scope
           .cancel('Não')
           .targetEvent(ev);
     $mdDialog.show(confirm).then(function() {
-      $scope.status = 'Você clicou em sim.';
+
+      vm.status = 'Você clicou em sim.';
+
     }, function() {
-      $scope.status = 'Você clicou em não.';
+
+      vm.status = 'Você clicou em não.';
+
     });
   };
+
 }]);

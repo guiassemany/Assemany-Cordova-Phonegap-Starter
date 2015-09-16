@@ -1,67 +1,66 @@
-acs.controller('AppCtrl', ['$scope', '$mdSidenav', '$timeout','$log', '$location', '$translate', '$filter',  function($scope, $mdSidenav, $timeout, $log, $location, $translate, $filter) {
-            var itensMenu = [
+acs.controller('AppCtrl', ['$mdSidenav', '$timeout','$log', '$location', '$translate', '$filter', '$state', function($mdSidenav, $timeout, $log, $location, $translate, $filter, $state) {
+
+            var vm = this;
+
+            vm.itensMenu = [
               {
                   nome: 'DASHBOARD',
                   icone: 'dashboard',
                   //iconeCor: 'pink',
-                  view: '/dashboard'
+                  state: 'dashboard'
               },
               {
                   nome: 'TABS',
                   icone: 'tab',
                   //iconeCor: 'red',
-                  view: 'tabs'
+                  state: 'tabs'
               },
               {
-                  nome: 'RESTFULL_TEST',
+                  nome: 'RESTFUL_TEST',
                   icone: 'sync',
                   //iconeCor: 'pink',
-                  view: 'api'
+                  state: 'api'
               },
               {
                   nome: 'DIALOGS',
                   icone: 'chat',
                   //iconeCor: 'pink',
-                  view: 'dialogs'
+                  state: 'dialogs'
               },
               {
                   nome: 'CARDS',
                   icone: 'view_stream',
                   //iconeCor: 'pink',
-                  view: '/cards'
+                  state: 'cards'
               },
               {
                   nome: 'CAMERA',
                   icone: 'camera',
                   //iconeCor: 'pink',
-                  view: '/plugin/camera'
+                  state: 'camera'
               },
               {
                   nome: 'DEVICE_INFO',
                   icone: 'perm_device_info',
                   //iconeCor: 'pink',
-                  view: '/plugin/deviceInfo'
+                  state: 'deviceInfo'
               }
             ];
 
-            $scope.selected = null;
-            $scope.itensMenu = itensMenu;
-            $scope.selecionaItem = selecionaItem;
-            $scope.habilitaMenu = habilitaMenu;
-            $scope.changeLanguage = changeLanguage;
+            vm.selected = null;
 
-            function habilitaMenu(name) {
+            vm.toggleMenu = function (name) {
               $mdSidenav(name).toggle();
             }
 
-            function selecionaItem(itemView) {
-              $scope.selected = angular.isNumber(itemView) ? $scope.itensMenu[itemView.index] : itemView;
-              $location.path(itemView);
-              $scope.habilitaMenu('left');
+            vm.selectItem = function(itemState) {
+              vm.selected = angular.isNumber(itemState) ? vm.itensMenu[itemState.index] : itemState;
+              $state.go(itemState);
+              vm.toggleMenu('left');
             }
 
-            function changeLanguage(langKey) {
+            vm.changeLanguage = function(langKey) {
               $translate.use(langKey);
             };
 
-        }]);
+}]);

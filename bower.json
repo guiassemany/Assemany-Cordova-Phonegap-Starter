@@ -2,7 +2,7 @@
   "name": "AssemanyCordovaStarter",
   "version": "1.0.0",
   "authors": [
-    "Guilherme Assemany <guilhermeassemany@hotmail.com>"
+    "Guilherme Assemany <guilherme@assemany.com>"
   ],
   "description": "Starter para phonegap/cordova",
   "main": "js/app.js",
@@ -27,11 +27,11 @@
     "angular-material": "~0.10.1",
     "angular-material-icons": "~0.5.0",
     "angular-resource": "~1.4.5",
-    "angular-route": "~1.4.5",
     "angular-sanitize": "~1.4.5",
     "angular-touch": "~1.4.5",
     "angular-translate": "~2.7.2",
     "angular-translate-loader-static-files": "~2.7.2",
+    "angular-ui-router": "~0.2.15",
     "fastclick": "~1.0.6",
     "ngCordova": "~0.1.20-alpha"
   }

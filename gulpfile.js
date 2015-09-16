@@ -25,12 +25,12 @@ gulp.task('vendors', function(){
         'www/lib/angular-animate/angular-animate.min.js',
         'www/lib/angular-material/angular-material.min.js',
         'www/lib/angular-material-icons/angular-material-icons.min.js',
-        'www/lib/angular-route/angular-route.min.js',
         'www/lib/angular-translate/angular-translate.min.js',
         'www/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',
         'www/lib/angular-touch/angular-touch.min.js',
         'www/lib/fastclick/lib/fastclick.js',
-        'www/lib/ngCordova/dist/ng-cordova.min.js'
+        'www/lib/ngCordova/dist/ng-cordova.min.js',
+        'www/lib/angular-ui-router/release/angular-ui-router.min.js'
 
     ])
         .pipe(concat('vendor.min.js'))

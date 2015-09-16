@@ -1,0 +1,30 @@
+<div layout="row" layout-align="start center">
+  <div>
+    <md-button class="md-icon-button" aria-label="Go Back" ng-click="cars.util.linkTo('api')">
+      <ng-md-icon aria-label="Back" icon="keyboard_backspace" ></ng-md-icon>
+    </md-button>
+  </div>
+  <div>
+    <h1>Cars</h1>
+  </div>
+</div>
+
+<div layout="row" >
+  <md-button class="md-accent md-raised md-hue-2" ng-click="cars.getCars();" flex="100">Get Cars</md-button>
+</div>
+
+<md-card ng-repeat="car in cars.cars">
+ <img ng-src="{{car.mainImage}}" class="md-card-image" alt="image caption">
+ <md-card-content>
+   <h2>{{car.title}}</h2>
+   <p>{{car.description}}</p>
+ </md-card-content>
+ <div class="md-actions" layout="row" layout-align="space-around center">
+   <div>
+     <md-button ng-click="cars.getDetail(car.id);" class="md-raised md-primary">Details</md-button>
+   </div>
+   <div>
+     <md-button ng-click="cars.removeCar(car.id);" class="md-raised md-warn">Remove</md-button>
+   </div>
+ </div>
+</md-card>

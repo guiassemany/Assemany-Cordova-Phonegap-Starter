@@ -1,3 +1,3 @@
-acs.controller('LoginCtrl', ['$scope', '$filter', function ($scope,$filter) {
-  
+acs.controller('LoginCtrl', ['$filter', function ($filter) {
+
 }]);

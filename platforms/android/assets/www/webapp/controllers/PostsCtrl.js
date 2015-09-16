@@ -1,4 +1,4 @@
-acs.controller('PostsCtrl' , function(Post, UtilService) {
+acs.controller('PostsCtrl', [ 'Post', 'UtilService', function(Post, UtilService) {
 
   var vm = this;
 
@@ -11,4 +11,4 @@ acs.controller('PostsCtrl' , function(Post, UtilService) {
   });
   //console.log($scope.posts);
 
-});
+}]);

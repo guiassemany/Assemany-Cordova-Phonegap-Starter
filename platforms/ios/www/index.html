@@ -13,30 +13,30 @@
         <link rel="stylesheet" type="text/css" href="lib/angular-material-icons/angular-material-icons.css" />
         <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
-        <title>Assemany Cordova Starter</title>
+        <title>Assemany Starter</title>
 
     </head>
 
-    <body layout="column" ng-controller="AppCtrl">
+    <body layout="column" ng-controller="AppCtrl as main" >
 
         <md-toolbar layout="row">
-          <md-button ng-click="habilitaMenu('left')" class="md-icon-button menuBtn accelerate" max-ripple="1">
+          <md-button ng-click="main.toggleMenu('left')" class="md-icon-button menuBtn accelerate" max-ripple="1">
             <ng-md-icon aria-label="Menu" icon="menu" ></ng-md-icon>
           </md-button>
-          <h1 layout-align-gt-sm="center" class="md-toolbar-tools">Assemany Cordova Starter</h1>
+          <h1 layout-align-gt-sm="center" class="md-toolbar-tools">Assemany Starter</h1>
           <md-menu >
           <md-button aria-label="{{'SELECT_LANGUAGE' | translate}}" class="md-icon-button" ng-click="$mdOpenMenu($event)" max-ripple="1">
             <ng-md-icon aria-label="{{'SELECT_LANGUAGE' | translate}}" icon="translate" ></ng-md-icon>
           </md-button>
           <md-menu-content width="2">
             <md-menu-item >
-              <md-button ng-click="changeLanguage('en')"> <span md-menu-align-target>{{'EN' | translate}}</span></md-button>
+              <md-button ng-click="main.changeLanguage('en')"> <span md-menu-align-target>{{'EN' | translate}}</span></md-button>
             </md-menu-item>
             <md-menu-item >
-              <md-button ng-click="changeLanguage('pt-br')"> <span md-menu-align-target>{{'PT_BR' | translate}}</span></md-button>
+              <md-button ng-click="main.changeLanguage('pt-br')"> <span md-menu-align-target>{{'PT_BR' | translate}}</span></md-button>
             </md-menu-item>
             <md-menu-item >
-              <md-button ng-click="changeLanguage('es')"> <span md-menu-align-target>{{'ES' | translate}}</span></md-button>
+              <md-button ng-click="main.changeLanguage('es')"> <span md-menu-align-target>{{'ES' | translate}}</span></md-button>
             </md-menu-item>
           </md-menu-content>
         </md-menu>
@@ -45,11 +45,11 @@
         <div layout="row" flex class="content-wrapper">
 
             <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2 md-closed" md-component-id="left" >
-              <img ng-src="img/sidenav.png" class="md-card-image sidenav-image" alt="Sidenav Image" >
+              <img ng-src="img/sidenav.jpg" class="md-card-image sidenav-image" alt="Sidenav Image" >
               <md-list class="itens-menu">
-                <md-item ng-repeat="item in itensMenu" max-ripple="1" >
+                <md-item ng-repeat="item in main.itensMenu" max-ripple="1" >
                   <md-item-content>
-                    <md-button ng-click="selecionaItem(item.view)" ng-class="{'selected' : item.view === selected }" max-ripple="1">
+                    <md-button ng-click="main.selectItem(item.state)" ng-class="{'selected' : item.state === selected }" max-ripple="1">
                       <ng-md-icon icon="{{item.icone}}" style="fill: {{item.iconeCor}}" ></ng-md-icon>
                       {{item.nome | translate}}
                     </md-button>
@@ -58,7 +58,7 @@
                 </md-item>
                 <md-item max-ripple="1" >
                   <md-item-content>
-                    <md-button ng-click="selecionaItem('auth/login')" ng-class="{'selected' : 'auth/login' === selected }" max-ripple="1">
+                    <md-button ng-click="main.selectItem('login')" ng-class="{'selected' : 'auth/login' === selected }" max-ripple="1">
                       <ng-md-icon icon="login" ></ng-md-icon>
                       {{ 'LOGIN' | translate }}
                     </md-button>
@@ -69,7 +69,7 @@
             </md-sidenav>
 
             <div layout="column" flex class="content-wrapper" id="primary-col">
-                <md-content layout="column" flex class="md-padding" ng-view>
+                <md-content layout="column" flex class="md-padding" ui-view>
                   <!-- Views Content -->
                 </md-content>
             </div>

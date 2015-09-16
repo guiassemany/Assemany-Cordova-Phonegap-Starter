@@ -1,13 +1,15 @@
-acs.controller('DeviceInfoCtrl', [ '$scope', '$cordovaDevice', function($scope, $cordovaDevice) {
-  
+acs.controller('DeviceInfoCtrl', ['$cordovaDevice', function($cordovaDevice) {
+
+  var vm = this;
+
   document.addEventListener("deviceready", function () {
 
-     $scope.device = $cordovaDevice.getDevice();
-     $scope.cordova = $cordovaDevice.getCordova();
-     $scope.model = $cordovaDevice.getModel();
-     $scope.platform = $cordovaDevice.getPlatform();
-     $scope.uuid = $cordovaDevice.getUUID();
-     $scope.version = $cordovaDevice.getVersion();
+     vm.device = $cordovaDevice.getDevice();
+     vm.cordova = $cordovaDevice.getCordova();
+     vm.model = $cordovaDevice.getModel();
+     vm.platform = $cordovaDevice.getPlatform();
+     vm.uuid = $cordovaDevice.getUUID();
+     vm.version = $cordovaDevice.getVersion();
 
   }, false);
 

@@ -1,4 +1,4 @@
-acs.controller('CarsCtrl', [ 'CarService', 'UtilService', '$location', function(CarService, UtilService, $location) {
+acs.controller('CarsCtrl', [ 'CarService', 'UtilService', '$location', '$state', function(CarService, UtilService, $location, $state) {
   // A simple controller that fetches a list of data from a service
   // "Cars" is a service returning mock data (CarService.js)
   var vm = this;
@@ -12,7 +12,6 @@ acs.controller('CarsCtrl', [ 'CarService', 'UtilService', '$location', function(
   };
 
   vm.getDetail = function(id){
-    $location.path('/api/car/' + id);
+    $state.go('apiShowCar', { carId: id });
   }
-
 }]);
