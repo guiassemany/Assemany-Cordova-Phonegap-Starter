@@ -1,10 +1,11 @@
 # Assemany Cordova/Phonegap Starter
 
 ## Screenshots
-<img src="http://assemany.com/projeto/acs/pic1.png" width="130">
-<img src="http://assemany.com/projeto/acs/pic2.png" width="130">
-<img src="http://assemany.com/projeto/acs/pic3.png" width="130">
-<img src="http://assemany.com/projeto/acs/pic4.png" width="130">
+1            |  2   | 3 | 4
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+![ACSPics](https://raw.github.com/guiassemany/Assemany-Cordova-Phonegap-Starter/master/Docs/pic1.png)  |  ![ACSPics](https://raw.github.com/guiassemany/Assemany-Cordova-Phonegap-Starter/master/Docs/pic2.png) | ![ACSPics](https://raw.github.com/guiassemany/Assemany-Cordova-Phonegap-Starter/master/Docs/pic3.png) | ![ACSPics](https://raw.github.com/guiassemany/Assemany-Cordova-Phonegap-Starter/master/Docs/pic4.png)
+
+_________
 
 ## What is it?
 
